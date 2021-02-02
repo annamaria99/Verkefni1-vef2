@@ -12,8 +12,10 @@
                             <a href="test/<%= videos.videos[video-1].id %>" class="video_link">
                                 <div class="video_image">
                                     <img src="<%= videos.videos[video-1].poster %>" alt="<%= videos.videos[video-1].title %>">
+                                    <small class="video_length"><%= locals.lengthOfVideo(videos.videos[video-1].duration)%> </small>
                                 </div>
                                 <h3 class="video_title"><%= videos.videos[video-1].title %></h3>
+                                <small class="video_created"> <%= locals.videoCreated(videos.videos[video-1].created) %> </small>
                             </a>
                         </div>
                     <% }) %>

@@ -1,7 +1,10 @@
 const express = require('express');
-const path = require('path');
+const time = require('./src/videoTime');
 
 const app = express();
+
+app.locals.lengthOfVideo = str => time.lengthOfVideo(str);
+app.locals.videoCreated = str => time.videoCreated(str);
 
 const videos = require('./src/videos');
 

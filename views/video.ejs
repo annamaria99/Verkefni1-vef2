@@ -1,5 +1,4 @@
 <%- include('header') -%>
-
     <h1> <%= video.videos[id-1]?.title %> </h1>
     <section>
         <div class="video_grid">
@@ -13,13 +12,14 @@
             <div class="connected_title">
                 <h3>Tengd myndbönd</h3>
             </div>
-            <div class="connected_video">
+            <div class="connected_videos">
                 <% video.videos[id-1]?.related.forEach((relatedVideo) => { %>
                     <a href="<%= video.videos[relatedVideo-1]?.id %>" class="video_link">
                         <div class="video_image">
                             <img src="/<%= video.videos[relatedVideo-1]?.poster %>" alt="<%= video.videos[video-1]?.title %>">
                         </div>
-                        <h3 class="video_title"><%= video.videos[video-1]?.title %></h3>
+                        <h3 class="video_title"><%= video.videos[relatedVideo-1]?.title %></h3>
+                        <small class="video_created"> <%= locals.videoCreated(video.videos[relatedVideo-1]?.created) %> </small>
                     </a>
             </div>
             <% }) %>
