@@ -1,4 +1,25 @@
 <%- include('header') -%>
+    <h1> Fræðslumyndbandaleigan </h1>
+    <% videos.categories.forEach((category) => { %>
+        <section>
+            <div class="videos_grid">
+                <div class="title_row">
+                    <h2 class="category_title"><%= category.title %></h2>
+                </div>
+                <div class="videos_row">
+                    <% category.videos.forEach((video) => { %>
+                        <div class="video">
+                            <a href="test/<%= videos.videos[video-1].id %>" class="video_link">
+                                <div class="video_image">
+                                    <img src="<%= videos.videos[video-1].poster %>" alt="<%= videos.videos[video-1].title %>">
+                                </div>
+                                <h3 class="video_title"><%= videos.videos[video-1].title %></h3>
+                            </a>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+    <% }) %>
 
-
-<%- inclued('footer') -%>
+<%- include('footer') -%>

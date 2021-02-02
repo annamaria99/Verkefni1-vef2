@@ -1,5 +1,34 @@
 <%- include('header') -%>
 
+    <h1> <%= video.videos[id-1]?.title %> </h1>
+    <section>
+        <div class="video_grid">
+            <video class="Video_to_show" controls>
+                <source src="../<%= video.videos[id-1]?.video %> " type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+            <div class="video_description">
+                 <p><%= video.videos[id-1]?.description %> </p>
+            </div>
+            <div class="connected_title">
+                <h3>Tengd myndbönd</h3>
+            </div>
+            <div class="connected_video">
+                <% video.videos[id-1]?.related.forEach((relatedVideo) => { %>
+                    <a href="<%= video.videos[relatedVideo-1]?.id %>" class="video_link">
+                        <div class="video_image">
+                            <img src="/<%= video.videos[relatedVideo-1]?.poster %>" alt="<%= video.videos[video-1]?.title %>">
+                        </div>
+                        <h3 class="video_title"><%= video.videos[video-1]?.title %></h3>
+                    </a>
+            </div>
+            <% }) %>
+        </div>
+    </section>
+    
+
+   
+
 <a class="back" href="/">Til baka</a>
 
-<%- inclued('footer') -%>
+<%- include('footer') -%>
