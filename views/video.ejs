@@ -19,8 +19,10 @@
                         <div class="video-image">
                             <img src="/<%= video.videos[relatedVideo-1]?.poster %>" alt="<%= video.videos[video-1]?.title %>">
                         </div>
-                        <h3 class="video-title"><%= video.videos[relatedVideo-1]?.title %></h3>
-                        <small class="video-created"> <%= locals.videoCreated(video.videos[relatedVideo-1]?.created) %> </small>
+                        <div class="video-info">
+                            <h3 class="video-title"><%= video.videos[relatedVideo-1]?.title %></h3>
+                            <small class="video-created"> <%= locals.videoCreated(video.videos[relatedVideo-1]?.created) %> </small>
+                        </div>
                     </a>
                   </div>
             <% }) %>
