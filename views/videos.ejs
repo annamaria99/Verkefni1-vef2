@@ -2,25 +2,28 @@
     <h1> Fræðslumyndbandaleigan </h1>
     <% videos.categories.forEach((category) => { %>
         <section>
-            <div class="videos_grid">
-                <div class="title_row">
-                    <h2 class="category_title"><%= category.title %></h2>
+            <div class="videos-grid">
+                <div class="title-row">
+                    <h2 class="category-title"><%= category.title %></h2>
                 </div>
-                <div class="videos_row">
+                <div class="videos-row">
                     <% category.videos.forEach((video) => { %>
                         <div class="video">
-                            <a href="test/<%= videos.videos[video-1].id %>" class="video_link">
-                                <div class="video_image">
+                            <a href="test/<%= videos.videos[video-1].id %>" class="video-link">
+                                <div class="video-image">
                                     <img src="<%= videos.videos[video-1].poster %>" alt="<%= videos.videos[video-1].title %>">
-                                    <small class="video_length"><%= locals.lengthOfVideo(videos.videos[video-1].duration)%> </small>
+                                    <small class="video-length"><%= locals.lengthOfVideo(videos.videos[video-1].duration)%> </small>
                                 </div>
-                                <h3 class="video_title"><%= videos.videos[video-1].title %></h3>
-                                <small class="video_created"> <%= locals.videoCreated(videos.videos[video-1].created) %> </small>
+                                <div class="video-info">
+                                    <h3 class="video-title"><%= videos.videos[video-1].title %></h3>
+                                    <small class="video-created"> <%= locals.videoCreated(videos.videos[video-1].created) %> </small>
+                                 </div>
                             </a>
                         </div>
                     <% }) %>
                 </div>
             </div>
+            <hr>
         </section>
     <% }) %>
 

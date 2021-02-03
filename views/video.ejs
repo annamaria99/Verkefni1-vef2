@@ -1,25 +1,25 @@
 <%- include('header') -%>
     <h1> <%= video.videos[id-1]?.title %> </h1>
     <section>
-        <div class="video_grid">
-            <video class="Video_to_show" controls>
+        <div class="video-grid">
+            <video class="Video-to-show" controls>
                 <source src="../<%= video.videos[id-1]?.video %> " type="video/mp4">
                     Your browser does not support the video tag.
             </video>
-            <div class="video_description">
+            <div class="video-description">
                  <p><%= video.videos[id-1]?.description %> </p>
             </div>
-            <div class="connected_title">
+            <div class="connected-title">
                 <h3>Tengd myndbönd</h3>
             </div>
-            <div class="connected_videos">
+            <div class="connected-videos">
                 <% video.videos[id-1]?.related.forEach((relatedVideo) => { %>
-                    <a href="<%= video.videos[relatedVideo-1]?.id %>" class="video_link">
-                        <div class="video_image">
+                    <a href="<%= video.videos[relatedVideo-1]?.id %>" class="video-link">
+                        <div class="video-image">
                             <img src="/<%= video.videos[relatedVideo-1]?.poster %>" alt="<%= video.videos[video-1]?.title %>">
                         </div>
-                        <h3 class="video_title"><%= video.videos[relatedVideo-1]?.title %></h3>
-                        <small class="video_created"> <%= locals.videoCreated(video.videos[relatedVideo-1]?.created) %> </small>
+                        <h3 class="video-title"><%= video.videos[relatedVideo-1]?.title %></h3>
+                        <small class="video-created"> <%= locals.videoCreated(video.videos[relatedVideo-1]?.created) %> </small>
                     </a>
             </div>
             <% }) %>
