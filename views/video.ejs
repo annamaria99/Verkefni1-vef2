@@ -12,8 +12,9 @@
             <div class="connected-title">
                 <h3>Tengd myndbönd</h3>
             </div>
-            <div class="connected-videos">
+            <div class="connected-row">
                 <% video.videos[id-1]?.related.forEach((relatedVideo) => { %>
+                  <div class="connected-video">
                     <a href="<%= video.videos[relatedVideo-1]?.id %>" class="video-link">
                         <div class="video-image">
                             <img src="/<%= video.videos[relatedVideo-1]?.poster %>" alt="<%= video.videos[video-1]?.title %>">
@@ -21,8 +22,9 @@
                         <h3 class="video-title"><%= video.videos[relatedVideo-1]?.title %></h3>
                         <small class="video-created"> <%= locals.videoCreated(video.videos[relatedVideo-1]?.created) %> </small>
                     </a>
-            </div>
+                  </div>
             <% }) %>
+          </div>
         </div>
     </section>
     
