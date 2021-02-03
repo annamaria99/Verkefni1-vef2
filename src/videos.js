@@ -6,6 +6,10 @@ const router = express.Router();
 
 const readFileAsync = util.promisify(fs.readFile);
 
+function catchErrors(fn) {
+  return (req, res, next) => fn(req, res, next).catch(next);
+}
+
 async function readVideos() {
   try {
     const files = await readFileAsync('videos.json', 'utf8');
@@ -22,15 +26,19 @@ async function videoList(req, res) {
   res.render('videos', { title, videos: videodata });
 }
 
-async function video(req, res) {
+async function video(req, res, next) {
   const title = 'Myndband';
   const { id } = req.params;
 
   const videodata = await readVideos();
-  res.render('video', { title, id, video: videodata });
+
+  if (!videodata.videos[id]) {
+    return next();
+  }
+  return res.render('video', { title, id, video: videodata });
 }
 
-router.get('/', videoList);
-router.get('/test/:id', video);
+router.get('/', catchErrors(videoList));
+router.get('/test/:id', catchErrors(video));
 
 module.exports = router;

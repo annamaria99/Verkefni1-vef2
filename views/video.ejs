@@ -2,6 +2,8 @@
     <h1> <%= video.videos[id-1]?.title %> </h1>
     <section>
         <div class="video-grid">
+          <% video.videos.forEach((videoShow) => { %>
+            <% if(videoShow.id == id) { %>
             <video class="Video-to-show" controls>
                 <source src="../<%= video.videos[id-1]?.video %> " type="video/mp4">
                     Your browser does not support the video tag.
@@ -27,11 +29,10 @@
                   </div>
             <% }) %>
           </div>
+            <% } %>
+          <% }) %>
         </div>
     </section>
-    
-
-   
 
 <a class="back" href="/">Til baka</a>
 

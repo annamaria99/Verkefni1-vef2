@@ -1,10 +1,10 @@
 {
-    "name": "Verkefni1",
+    "name": "verkefni1",
     "version": "1.0.0",
     "description": "Myndbandavefur sem fær gögn úr JSON skrá",
     "main": "app.js",
     "scripts": {
-        "test:eslint": "eslint \"./src/**/*.js\" --fix",
+        "test:eslint": "eslint \"./src/**/*.js\" --fix && eslint \"./**/*.js\" --fix",
         "test:stylelint": "stylelint \"./public/styles.css\" --syntax css",
         "eslint": "npm run eslint-js -s && npm run eslint-html -s",
         "test": "concurrently npm:test:*",
