@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+*,
+*::before *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #eee;
+  color: #333;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.videos-row {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.video-link {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  height: 100%;
+  text-decoration: none;
+  width: 320px;
+}
+
+img {
+  height: 200px;
+  margin: 10px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.video-title {
+  margin-bottom: 5px;
+  margin-left: 20px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.category-title {
+  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.video-image {
+  height: 200px;
+  margin: 10px;
+  object-fit: cover;
+  position: relative;
+  text-align: center;
+  width: 300px;
+}
+
+video {
+  height: 100%;
+  margin-left: 30px;
+  width: 100%;
+}
+
+.back {
+  color: #333;
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.connected-row {
+  align-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.video-length {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 1px;
+  color: #eee;
+  padding: 3px;
+  position: absolute;
+  right: -5px;
+}
+
+.video-created {
+  float: left;
+  margin-left: 20px;
+}
+
+.connected-title {
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.video-description {
+  margin-left: 30px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.videos-grid {
+  margin-left: 100px;
+}
+
+hr {
+  margin-bottom: 20px;
+  margin-left: 90px;
+  margin-top: 20px;
+  width: 65%;
+}
+
+.copyright {
+  font-size: small;
+}
+
+.error {
+  font-size: 25px;
+  margin-top: 40px;
+}
